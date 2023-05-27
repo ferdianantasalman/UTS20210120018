@@ -1,0 +1,220 @@
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
+import 'detail_page_model.dart';
+export 'detail_page_model.dart';
+
+class DetailPageWidget extends StatefulWidget {
+  const DetailPageWidget({Key? key}) : super(key: key);
+
+  @override
+  _DetailPageWidgetState createState() => _DetailPageWidgetState();
+}
+
+class _DetailPageWidgetState extends State<DetailPageWidget> {
+  late DetailPageModel _model;
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+  final _unfocusNode = FocusNode();
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => DetailPageModel());
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    _unfocusNode.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        body: SafeArea(
+          top: true,
+          child: ListView(
+            padding: EdgeInsets.zero,
+            scrollDirection: Axis.vertical,
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  color: Color(0xFFEEEEEE),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 20, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          FlutterFlowIconButton(
+                            borderColor: Color(0xFFEEEEEE),
+                            borderRadius: 20,
+                            borderWidth: 1,
+                            buttonSize: 40,
+                            fillColor: Color(0xEEEEEEEE),
+                            icon: Icon(
+                              Icons.keyboard_arrow_left,
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              size: 25,
+                            ),
+                            onPressed: () {
+                              print('IconButton pressed ...');
+                            },
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(75, 0, 0, 0),
+                            child: Text(
+                              'Technology',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Source Sans Pro',
+                                    fontSize: 27,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
+                      child: Container(
+                        width: 350,
+                        decoration: BoxDecoration(
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Align(
+                              alignment: AlignmentDirectional(-0.87, 0.05),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    10, 10, 3, 0),
+                                child: SelectionArea(
+                                    child: Text(
+                                  'Technology Radar 2023 For Android Developers',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        lineHeight: 1.5,
+                                      ),
+                                )),
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(10, 8, 0, 0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Align(
+                                    alignment: AlignmentDirectional(-0.87, 0),
+                                    child: Text(
+                                      'Technology',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            color: Color(0xFF747474),
+                                          ),
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: AlignmentDirectional(-0.87, 0),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          10, 0, 0, 0),
+                                      child: Text(
+                                        '-',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              color: Color(0xFF747474),
+                                            ),
+                                      ),
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: AlignmentDirectional(-0.87, 0),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          10, 0, 0, 0),
+                                      child: Text(
+                                        'Mei, 27 2003',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              color: Color(0xFF747474),
+                                            ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: Image.asset(
+                                  'assets/images/ass_5.webp',
+                                  width: 330,
+                                  height: 200,
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
+                              child: Text(
+                                'There are four quadrants in this radar: programming languages and frameworks, tools, platforms, and techniques. Each item in the radar has a state: adopt, trial, assess and hold. These are recommendations made by the Thoughtworks. Priority is in the order of adopt > trial > assess > hold. Adopt implies that you ought to give it some serious thought. Trial means that you should try it but not completely proven. Assess means you should follow but don’t need to try yet. Hold means that it might cause some problems, so be cautious.\n\nContributors of this technology radar are the senior technologists at Thoughtworks including Martin Fowler who is a guy that every developer should follow.\n\nNow lets jump into the radar items related to Android developers. Dependency pruning (adopt) This is a technique that recommends periodically checking the dependencies and libraries used in the project and removing the unused ones. This will speed up your build time.',
+                                textAlign: TextAlign.justify,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      lineHeight: 1.3,
+                                    ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
